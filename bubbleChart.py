@@ -4,10 +4,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-fileName = "oreo.pkl"
+fileName = "selfie.pkl"
 df = pd.read_pickle(f"data/{fileName}")
 df = df.drop("Black")
-df = df[df["Count"] > 8_500]
+df = df[df["Count"] > 70_500]
 print(df)
 
 
@@ -55,5 +55,5 @@ for circle, label, color in zip(circles, labels, colors):
           va='center',
           ha='center',
      )
-# plt.savefig(f"plots/{fileName[0:-4]} plot.jpg")
-plt.show()
+plt.savefig(f"plots/{fileName[0:-4]}Plot.jpg")
+# plt.show()
